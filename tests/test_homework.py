@@ -20,6 +20,7 @@ def test_01():
                 "knn",
                 "-P",
                 "n_neighbors=5",
+                "--no-conda",
             ],
             check=True,
         )
