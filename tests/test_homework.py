@@ -12,8 +12,15 @@ def test_01():
     # Test if the homework script runs without errors
     try:
         subprocess.run(
-            "mlflow run https://github.com/jdvelasq/mlflow-wine-quality.git -e knn -P n_neighbors=5",
-            shell=True,
+            [
+                "mlflow",
+                "run",
+                "https://github.com/jdvelasq/mlflow-wine-quality.git",
+                "-e",
+                "knn",
+                "-P",
+                "n_neighbors=5",
+            ],
             check=True,
         )
     except subprocess.CalledProcessError as e:
